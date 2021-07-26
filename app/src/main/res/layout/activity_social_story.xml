@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SocialStoryActivity"
+    android:background="@drawable/bg2">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tv2BgTransparent"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Learn &amp; Play"
+        android:textColor="#fff"
+        android:textSize="28sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:targetApi="p" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@null"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:onClick="btn_back"
+        android:padding="10dp"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:padding="10dp"
+        android:gravity="center"
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <com.google.android.material.card.MaterialCardView
+            android:layout_height="100sp"
+            android:layout_width="match_parent"
+            tools:ignore="MissingConstraints">
+        </com.google.android.material.card.MaterialCardView>-->
+
+        <com.google.android.material.card.MaterialCardView
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            android:background="@drawable/violet_bg"
+            android:layout_gravity="center"
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title"
+            android:layout_margin="15dp"
+            android:elevation="30dp"
+            app:cardCornerRadius="30dp">
+
+            <ImageView
+                android:id="@+id/img"
+                style="@style/image_style_1"
+                android:backgroundTint="#ED3939"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/statusprogressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#000E5A"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test"
+        app:layout_constraintVertical_bias="0.272">
+
+        <TextView
+            android:id="@+id/speak_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#000E5A"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:onClick="play"
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_autofps_select_24"
+        tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/circularSpinner"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:indeterminateTint="#E1FFBF00"
+        app:layout_constraintBottom_toBottomOf="@+id/test"
+        app:layout_constraintEnd_toEndOf="@+id/test"
+        app:layout_constraintStart_toStartOf="@+id/test"
+        app:layout_constraintTop_toTopOf="@+id/test" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buttonNext"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/colorPrimaryVariantDay"
+        android:checkable="true"
+        android:clickable="true"
+        android:elevation="30dp"
+        android:focusable="true"
+        android:foregroundGravity="bottom"
+        android:onClick="didTapButton"
+        app:cardCornerRadius="50dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/test">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_next" />
+    </com.google.android.material.card.MaterialCardView>
+
+   <!-- <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buttonReplay"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/colorPrimaryVariantDay"
+        android:checkable="true"
+        android:clickable="true"
+        android:elevation="30dp"
+        android:focusable="true"
+        android:foregroundGravity="bottom"
+        android:onClick="replayButton"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNext"
+        app:layout_constraintTop_toBottomOf="@+id/btn_play"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_replay" />
+
+    </com.google.android.material.card.MaterialCardView>-->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

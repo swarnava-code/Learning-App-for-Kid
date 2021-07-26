@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".PlayWord">
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="NEXT"
+        android:textSize="25dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:id="@+id/grid1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TableRow>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/imagesHeightInWordGame"
+                        android:layout_height="@dimen/imagesHeightInWordGame"
+                        android:layout_above="@id/btn_nxt"
+                        android:layout_below="@id/title"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="30dp"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:id="@+id/drag1"
+                            style="@style/image_style_1" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/imagesHeightInWordGame"
+                        android:layout_height="@dimen/imagesHeightInWordGame"
+                        android:layout_above="@id/btn_nxt"
+                        android:layout_below="@id/title"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="30dp"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:id="@+id/drag2"
+                            style="@style/image_style_1" />
+                    </androidx.cardview.widget.CardView>
+                </TableRow>
+
+                <TableRow>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/imagesHeightInWordGame"
+                        android:layout_height="@dimen/imagesHeightInWordGame"
+                        android:layout_above="@id/btn_nxt"
+                        android:layout_below="@id/title"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="30dp"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:id="@+id/drag3"
+                            style="@style/image_style_1" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/imagesHeightInWordGame"
+                        android:layout_height="@dimen/imagesHeightInWordGame"
+                        android:layout_above="@id/btn_nxt"
+                        android:layout_below="@id/title"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:elevation="30dp"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:id="@+id/drag4"
+                            style="@style/image_style_1" />
+                    </androidx.cardview.widget.CardView>
+                </TableRow>
+
+                <TableRow></TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+
+        <!--for answer layout-->
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/grid2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/grid1"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TableRow>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/imagesHeightInWordGame"
+                        android:layout_height="@dimen/imagesHeightInWordGame"
+                        android:layout_weight="1"
+                        android:background="#FFE082">
+
+                        <ImageView
+                            android:id="@+id/answer1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/answerText1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            tools:text="Hello" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/imagesHeightInWordGame"
+                        android:layout_height="@dimen/imagesHeightInWordGame"
+                        android:layout_weight="1"
+                        android:background="#CCFF90">
+
+                        <ImageView
+
+                            android:id="@+id/answer2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/answerText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            tools:text="Hello" />
+                    </RelativeLayout>
+                </TableRow>
+
+
+                <TableRow>
+                    <RelativeLayout
+                        android:layout_width="@dimen/imagesHeightInWordGame"
+                        android:layout_height="@dimen/imagesHeightInWordGame"
+                        android:layout_weight="1"
+                        android:background="#B2EBF2">
+
+                        <ImageView
+                            android:id="@+id/answer3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top" />
+
+                        <TextView
+                            android:id="@+id/answerText3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            tools:text="Hello" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/imagesHeightInWordGame"
+                        android:layout_height="@dimen/imagesHeightInWordGame"
+                        android:layout_weight="1"
+                        android:background="#F8BBD0">
+
+                        <ImageView
+                            android:id="@+id/answer4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top" />
+
+                        <TextView
+                            android:id="@+id/answerText4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            tools:text="Hello" />
+
+                    </RelativeLayout>
+
+
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

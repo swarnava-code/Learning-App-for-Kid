@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/cardview"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:checkable="true"
+    android:clickable="true"
+    android:elevation="30dp"
+    android:focusable="true"
+    app:cardCornerRadius="10dp"
+    android:onClick="buttonClickLeft"
+    android:layout_margin="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@color/colorGradientCenter"
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:padding="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:padding="5dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textView"
+            android:textColor="@color/pressedStart"
+            android:fontFamily="@font/passero"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hygiene" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

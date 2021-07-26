@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BodyPart"
+    android:background="@drawable/bg2">
+
+    <TextView
+        android:id="@+id/body"
+        style="@style/body_part"
+        android:tag="Body"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/body"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:tag="Hair"
+        android:id="@+id/hair"
+        android:background="@drawable/hair"
+        style="@style/body_part"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body"/>
+
+    <TextView
+        android:tag="Left Ear"
+        android:background="@drawable/leftear"
+        android:id="@+id/leftear"
+        style="@style/body_part"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="75dp"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body"/>
+
+
+    <TextView
+        android:id="@+id/rightear"
+        android:tag="Right Ear"
+        style="@style/body_part"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/rightear"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body"/>
+
+    <TextView
+        android:id="@+id/head"
+        style="@style/body_part"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/head"
+        android:tag="Head"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+    <TextView
+        android:height="5dp"
+        android:id="@+id/eyebrow"
+        style="@style/body_part"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/eyebrow"
+        android:tag="Eye Brow"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+
+    <TextView
+        android:id="@+id/eye"
+        style="@style/body_part"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/eye"
+        android:tag="Eye"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+    <TextView
+        android:id="@+id/nose"
+        style="@style/body_part"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/nose"
+        android:tag="Nose"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+    <TextView
+        android:id="@+id/mouth"
+        style="@style/body_part"
+        android:layout_marginTop="105dp"
+        android:background="@drawable/mouth"
+        android:tag="Mouth"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+    <TextView
+        android:id="@+id/neck"
+        style="@style/body_part"
+        android:layout_marginTop="129dp"
+        android:background="@drawable/neck"
+        android:tag="Neck"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+    <TextView
+        android:id="@+id/chest"
+        style="@style/body_part"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/chest"
+        android:tag="Chest"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+    <TextView
+        android:id="@+id/stomach"
+        style="@style/body_part"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/stomach"
+        android:tag="Stomach"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+    <TextView
+        android:id="@+id/lefthand"
+        style="@style/body_part"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="135dp"
+        android:background="@drawable/lefthand"
+        android:tag="Left Hand"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+
+    <TextView
+        android:id="@+id/righthand"
+        style="@style/body_part"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="151dp"
+        android:background="@drawable/righthand"
+        android:tag="Right Hand"
+        app:layout_constraintStart_toEndOf="@+id/lefthand"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+
+
+    <TextView
+        android:id="@+id/leg"
+        style="@style/body_part"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/leg"
+        android:tag="Leg"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+
+    <TextView
+        android:id="@+id/knee"
+        style="@style/body_part"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="378dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/knee"
+        android:tag="Knee"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body"
+        app:layout_constraintTop_toTopOf="@+id/body" />
+
+
+    <TextView
+        android:id="@+id/foot"
+        style="@style/body_part"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/foot"
+        android:tag="Foot"
+        app:layout_constraintBottom_toBottomOf="@+id/body"
+        app:layout_constraintEnd_toEndOf="@+id/body"
+        app:layout_constraintStart_toStartOf="@+id/body" />
+
+
+    <TextView
+        android:id="@+id/textView_desc"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:onClick="back"
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

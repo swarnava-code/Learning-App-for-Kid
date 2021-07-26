@@ -1,0 +1,659 @@
+<resources>
+    <string name="app_name">Social Story Online</string>
+    <string name="app_description">Learning App for the Children with Disability</string>
+    <string name="developer">Group-20, STCET,2021</string>
+    <string name="title_activity_main2">Main Activity</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="nav_header_title">@string/app_name</string>
+    <string name="nav_header_subtitle">@string/developer</string>
+    <string name="nav_header_desc">St. Thomas\' College of Engineering \n&amp; Technology, Kolkata</string>
+    <string name="action_share">Share this App</string>
+    <string name="action_todays_story">Play a Story</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_rate">Courtesy</string>
+    <string name="menu_feedback">Feedback</string>
+
+    <string name="math_title">Math</string>
+    <string name="math_desc">It will help to learn Addition, Subtraction, Multiplication &amp; Division</string>
+
+    <string name="english_title">English</string>
+    <string name="english_desc">Learn most of the common words</string>
+
+    <string name="social_story_title">Social Story</string>
+    <string name="social_story_desc">Learn How to mix in society</string>
+
+    <string name="fun_time_title">Fun Time</string>
+    <string name="fun_time_desc">Fun is important besides learning :)</string>
+
+
+    <string name="title_activity_fun_time_menu">FunTimeMenu</string>
+
+    <string name="first_fragment_label">First Fragment</string>
+
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="next">Next</string>
+
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string-array name="array_courtesy">
+        <item>Pinterest</item>
+        <item>Dribble</item>
+        <item>Pixabay</item>
+        <item>1001fonts</item>
+        <item>FreeLogoDesign</item>
+        <item>Unsplash</item>
+    </string-array>
+
+    <string-array name="animal">
+        <item>Dog</item>
+        <item>Cat</item>
+        <item>Cow</item>
+        <item>Monkey</item>
+        <item>Gorilla</item>
+        <item>Horse</item>
+        <item>Tiger</item>
+        <item>Lion</item>
+        <item>Elephant</item>
+        <item>Squirrel</item>
+        <item>Zebra</item>
+    </string-array>
+
+    <string-array name="bird">
+        <item>Crow</item>
+        <item>Koel</item>
+        <item>Chicken</item>
+        <item>Parrot</item>
+        <item>Peacock</item>
+        <item>Pigeon</item>
+        <item>Sparrow</item>
+        <item>Dove</item>
+        <item>Goose</item>
+        <item>Owl</item>
+        <item>Penguin</item>
+    </string-array>
+
+    <string-array name="flower">
+        <item>Rose</item>
+        <item>Bluebell</item>
+        <item>Crocus</item>
+        <item>Dandelion</item>
+        <item>Hyacinth</item>
+        <item>Lotus</item>
+        <item>Orchid</item>
+        <item>Snowdrop</item>
+        <item>Lily</item>
+        <item>Tulip</item>
+        <item>Cherry Blossom</item>
+    </string-array>
+
+    <string-array name="fruit">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Mango</item>
+        <item>Pineapple</item>
+        <item>Cherry</item>
+        <item>Grapes</item>
+        <item>Guava</item>
+        <item>Litchi</item>
+        <item>Papaya</item>
+        <item>Coconut</item>
+    </string-array>
+
+    <string-array name="vegetable">
+        <item>Carrot</item>
+        <item>Potato</item>
+        <item>Pumpkin</item>
+        <item>Tomato</item>
+        <item>Broccoli</item>
+        <item>Cauliflower</item>
+        <item>Chili</item>
+        <item>Corn</item>
+        <item>Cucumber</item>
+        <item>Eggplant</item>
+        <item>Garlic</item>
+        <item>Green Pepper</item>
+        <item>Mushroom</item>
+        <item>Onion</item>
+    </string-array>
+
+    <string-array name="tree">
+        <item>Coconut Tree</item>
+        <item>Mango Tree</item>
+        <item>Litchi Tree</item>
+        <item>Banana Tree</item>
+        <item>Aloevera Tree</item>
+        <item>Apple Tree</item>
+        <item>Avenue Tree</item>
+        <item>Banyan Tree</item>
+        <item>Cork Tree</item>
+        <item>Neem Tree</item>
+        <item>Tulsi Plant</item>
+    </string-array>
+
+    <string-array name="food">
+        <item>Bread</item>
+        <item>Burger</item>
+        <item>Cake</item>
+        <item>Chow Mein</item>
+        <item>Egg</item>
+        <item>French Fries</item>
+        <item>Fried Rice</item>
+        <item>Ice Cream</item>
+        <item>Meat</item>
+        <item>Pasta</item>
+        <item>Pizza</item>
+    </string-array>
+
+    <string-array name="music">
+        <item>Banjo</item>
+        <item>Cello</item>
+        <item>Drum Set</item>
+        <item>Guitar</item>
+        <item>Maracas</item>
+        <item>Microphone</item>
+        <item>Mouth Organ</item>
+        <item>Piano</item>
+        <item>Violin</item>
+        <item>Xylophone</item>
+        <item>Saxophone</item>
+        <item>Ukulele</item>
+    </string-array>
+
+    <string-array name="toys">
+        <item>Yoyo</item>
+        <item>Airplane</item>
+        <item>Ball</item>
+        <item>Bicycle</item>
+        <item>Car</item>
+        <item>Dall</item>
+        <item>Kite</item>
+        <item>Rocking Horse</item>
+        <item>Rubber Duck</item>
+        <item>Teddy Bear</item>
+        <item>Train</item>
+    </string-array>
+
+    <string-array name="sports">
+        <item>Baseball</item>
+        <item>Basketball</item>
+        <item>Golf</item>
+        <item>Soccer</item>
+        <item>Tennis</item>
+        <item>Badminton</item>
+        <item>Boxing</item>
+        <item>Cricket</item>
+        <item>Hockey</item>
+        <item>Karate</item>
+        <item>Pool</item>
+        <item>Table Tennis</item>
+        <item>Volleyball</item>
+    </string-array>
+
+
+    <string-array name="insects">
+        <item>Bee</item>
+        <item>Beetle</item>
+        <item>Bug</item>
+        <item>Butterfly</item>
+        <item>Dragonfly</item>
+        <item>Fly</item>
+        <item>Mantis</item>
+        <item>Mosquito</item>
+        <item>Spider</item>
+    </string-array>
+
+    <string-array name="reptiles">
+        <item>Frog</item>
+        <item>Snake</item>
+        <item>Turtle</item>
+        <item>Gekkota</item>
+        <item>Lacertids</item>
+        <item>Chameleon</item>
+        <item>Crocodile</item>
+    </string-array>
+
+    <string-array name="flags">
+        <item>India</item>
+        <item>Belgium</item>
+        <item>Brazil</item>
+        <item>Bangladesh</item>
+        <item>Germany</item>
+        <item>Japan</item>
+        <item>Korea</item>
+        <item>Netherlands</item>
+        <item>Portugal</item>
+        <item>Spain</item>
+        <item>Sri lanka</item>
+        <item>Switzerland</item>
+    </string-array>
+
+    <string-array name="kitchen">
+        <item>Blender Mixer</item>
+        <item>Bottle Opener</item>
+        <item>Citrus Juicer</item>
+        <item>Colander</item>
+        <item>Cutting Board</item>
+        <item>Grater</item>
+        <item>Knife</item>
+        <item>Microwave</item>
+        <item>Saucepan</item>
+        <item>Scissor</item>
+        <item>Skillet</item>
+        <item>Spoon</item>
+        <item>Vegetable Peeler</item>
+        <item>Whisk</item>
+    </string-array>
+    <string-array name="shapes">
+        <item>Circle</item>
+        <item>Cube</item>
+        <item>Rectangle</item>
+        <item>Sphere</item>
+        <item>Square</item>
+        <item>Triangle</item>
+    </string-array>
+    <!-- Strings used for fragments for navigation -->
+    <string-array name="technology">
+        <item>Camera</item>
+        <item>HardDisk</item>
+        <item>Headphone</item>
+        <item>Laptop</item>
+        <item>Microphone</item>
+        <item>Mouse</item>
+        <item>Mp3 Player</item>
+        <item>Pen Drive</item>
+        <item>Printer</item>
+        <item>Typewriter</item>
+        <item>Webcam</item>
+    </string-array>
+    <string-array name="occupations">
+        <item>Astronaut</item>
+        <item>Athlete</item>
+        <item>Chef</item>
+        <item>Cricketer</item>
+        <item>Doctor</item>
+        <item>Engineer</item>
+        <item>Footballer</item>
+        <item>Police</item>
+        <item>Referee</item>
+        <item>Soldiers</item>
+        <item>Teacher</item>
+        <item>Farmer</item>
+        <item>Painter</item>
+        <item>Photographer</item>
+        <item>Pilot</item>
+        <item>Seller</item>
+        <item>Shopkeeper</item>
+    </string-array>
+    <string-array name="alphabet">
+        <item>Apple</item>
+        <item>Ball</item>
+        <item>Cat</item>
+        <item>Dall</item>
+        <item>Egg</item>
+        <item>Frog</item>
+        <item>Guiter</item>
+        <item>Horse</item>
+        <item>Ice Cream</item>
+        <item>Jam</item>
+        <item>Kite</item>
+        <item>Lion</item>
+        <item>Mango</item>
+        <item>Nest</item>
+        <item>Owl</item>
+        <item>Parrot</item>
+        <item>Queen</item>
+        <item>Rose</item>
+        <item>Spider</item>
+        <item>Teacher</item>
+        <item>Umbrella</item>
+        <item>Vegetables</item>
+        <item>Watch</item>
+        <item>Xray</item>
+        <item>Yoyo</item>
+        <item>Zebra</item>
+    </string-array>
+    <string-array name="color">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>White</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Black</item>
+        <item>Green</item>
+        <item>Brown</item>
+        <item>Pink</item>
+    </string-array>
+
+    <string-array name="pronoun">
+        <item>He</item>
+        <item>She</item>
+        <item>Himself</item>
+        <item>Herself</item>
+        <item>I</item>
+        <item>We</item>
+        <item>They</item>
+        <item>That</item>
+        <item>These</item>
+        <item>Those</item>
+        <item>It</item>
+    </string-array>
+
+    <string-array name="verb">
+        <item>Dancing</item>
+        <item>Drinking</item>
+        <item>Eating</item>
+        <item>Playing</item>
+        <item>Laughing</item>
+        <item>Painting</item>
+        <item>Reading</item>
+        <item>Running</item>
+        <item>Sleeping</item>
+        <item>Swimming</item>
+    </string-array>
+
+    <string-array name="preposition">
+        <item>Above</item>
+        <item>Across</item>
+        <item>After</item>
+        <item>Along</item>
+        <item>Away</item>
+        <item>Before</item>
+        <item>Behind</item>
+        <item>Beside</item>
+        <item>Between</item>
+        <item>Down</item>
+        <item>In</item>
+        <item>Through</item>
+        <item>Towards</item>
+        <item>Under</item>
+        <item>Up</item>
+    </string-array>
+
+    <string-array name="places">
+        <item>Airport</item>
+        <item>Classroom</item>
+        <item>Hospital</item>
+        <item>Station</item>
+        <item>Restuarent</item>
+        <item>School</item>
+        <item>Zoo</item>
+        <item>Park</item>
+
+    </string-array>
+
+    <string-array name="threeletterword">
+        <item>Bee</item>
+        <item>Bug</item>
+        <item>Car</item>
+        <item>Cat</item>
+        <item>Cow</item>
+        <item>Dog</item>
+        <item>Egg</item>
+        <item>Fly</item>
+        <item>Owl</item>
+    </string-array>
+
+    <string-array name="fourletterword">
+        <item>Ball</item>
+        <item>Bird</item>
+        <item>Cake</item>
+        <item>Chef</item>
+        <item>Corn</item>
+        <item>Dall</item>
+        <item>Dove</item>
+        <item>Kite</item>
+        <item>Koel</item>
+        <item>Lion</item>
+        <item>Lily</item>
+        <item>Meat</item>
+        <item>Nest</item>
+        <item>Rose</item>
+    </string-array>
+
+    <string-array name="fiveletterword">
+        <item>Apple</item>
+        <item>Candy</item>
+        <item>Chair</item>
+        <item>Chalk</item>
+        <item>Grape</item>
+        <item>Guava</item>
+        <item>Phone</item>
+        <item>Piano</item>
+        <item>Plane</item>
+        <item>Snake</item>
+        <item>Teddy</item>
+        <item>Teeth</item>
+        <item>Tiger</item>
+        <item>Watch</item>
+        <item>Water</item>
+    </string-array>
+
+    <string-array name="sixletterword">
+        <item>Banana</item>
+        <item>Carrot</item>
+        <item>Circle</item>
+        <item>Friend</item>
+        <item>Kitten</item>
+        <item>Litchi</item>
+        <item>Monkey</item>
+        <item>Nature</item>
+        <item>Orange</item>
+        <item>Parrot</item>
+        <item>Potato</item>
+        <item>Rabbit</item>
+        <item>School</item>
+        <item>Tomato</item>
+        <item>Violin</item>
+    </string-array>
+    <string-array name="birthday">
+        <item>I like to play with my friends at school.</item>
+        <item>Sometimes my friends will invite me to go to a party for their birthday.</item>
+        <item>The party could be at a house, or a play center, or somewhere else.</item>
+        <item>When i arrive at the birthday party. I usually give my friend a present.</item>
+        <item>Then I will say \"Happy Birthday\" to my friend.</item>
+        <item>At the party, there will be other children and Mums and Dads</item>
+        <item>Sometimes there will be games to play.We might play pass the parcel.</item>
+        <item>we might play musical chairs, or something else.</item>
+        <item>When its time to eat, we will usually sit together at the table.</item>
+        <item>Then we can have something to eat.There will be lots of different food to choose from.</item>
+        <item>After we have eaten, its usually time to sing Happy Birthday. Then my friend will blow out the candles of the cake.</item>
+        <item>When the party is finished, my friend may give me a ballon, or a gift bag or something else to take home.</item>
+        <item>Then it will be time to say \"goodbye\".</item>
+        <item>It is a good to say thank you to my friend for asking me to the party.</item>
+        <item>Birthday Parties are a lot of fun.</item>
+    </string-array>
+
+    <string-array name="angry">
+        <item>If you are angry on someone, simply walk away.</item>
+        <item>Go to a quiet place.</item>
+        <item>In case you continue feeling angry.</item>
+        <item>Take a break.</item>
+        <item>Try playing a dough.</item>
+        <item>Start counting numbers.</item>
+        <item>Take deep breaths.</item>
+        <item>Do not hit others.</item>
+        <item>Do not kick others.</item>
+        <item>Do not hurt yourself or others.</item>
+    </string-array>
+    <string-array name="askforhelp">
+        <item>Sometimes an activity can get too hard.</item>
+        <item>Do not cry or yell.</item>
+        <item>You can ask for help.</item>
+        <item>Sometimes asking can be uncomfortable.</item>
+        <item>You can say, Help please.</item>
+        <item>If a friend disturbs, you can ask for help.</item>
+        <item>For a adult, you can say, can you help me please.</item>
+        <item>Adults and friends will help in solving the problem.</item>
+    </string-array>
+    <string-array name="brushing">
+        <item>Get the toothbrush wet.</item>
+        <item>Put a little bit of toothpaste on it.</item>
+        <item>Brush each tooth front and back. Brush where teeth and gums come together.</item>
+        <item>Continue brushing for two minutes.</item>
+        <item>Spit toothpaste in sink. Rinse mouth in water.</item>
+        <item>Rinse toothpaste from brush and clean it in water.</item>
+    </string-array>
+
+    <string-array name="schooltime">
+        <item>It is time to go back to school.</item>
+        <item>You will get to meet your new teacher.</item>
+        <item>You will make new friends.</item>
+        <item>You will learn new things.</item>
+        <item>You will learn about the following rules.</item>
+        <item>You will use the computer.</item>
+        <item>You will learn about new numbers.</item>
+        <item>You will read books.</item>
+        <item>You will eat lunch.</item>
+        <item>You will be allowed to take breaks if you need.</item>
+        <item>School will be fun!</item>
+        <item>At the end of the day, you can go home.</item>
+        <item>We can come back to school tomorrow.</item>
+    </string-array>
+
+    <string-array name="hideandseek">
+        <item>Someone must close your eyes while others hide.</item>
+        <item>He should count from 1 to 10.</item>
+        <item>This is boy who has to find others when counting ends.</item>
+        <item>Do not cheat and peep through the eyes.</item>
+        <item>Ready or Not, Here he comes to catch you!</item>
+        <item>Look under the bed.</item>
+        <item>Yes, He catches someone!</item>
+        <item>If he cannot, he can give up!</item>
+        <item>Hide and seek is a lot of fun!</item>
+        <item>Find good places to hide each time.</item>
+        <item>Probably under a table, making no sounds.</item>
+        <item> Or behind a pillar maybe!</item>
+        <item>The seeker still can finds you!</item>
+        <item>Be silent while hiding!</item>
+        <item>Children should play hide and seek!</item>
+    </string-array>
+    <string-array name="hittingothers">
+        <item>Sometimes you can be angry.</item>
+        <item>Someone can disturb you while playing.</item>
+        <item>Do not listen to someone who taunts you.</item>
+        <item>You might be scolded for some event.</item>
+        <item>You might feel confused and disturbed.</item>
+        <item>You should not hit others.</item>
+        <item>Stay away from negativity.</item>
+        <item>Try to solve problems by talking.</item>
+        <item>Take deep breaths.</item>
+    </string-array>
+    <string-array name="makingnoise">
+        <item>There may be several students in a class.</item>
+        <item>Many students sitting together might create problems.</item>
+        <item>Teacher may ask questions.</item>
+        <item>Many people speaking together might cause problems.</item>
+        <item>You can get confused.</item>
+        <item>It is good to be quiet in a confusion.</item>
+        <item>Raise hands if you need to answer.</item>
+    </string-array>
+
+    <string-array name="personalspace">
+        <item>Let us learn about personal space.</item>
+        <item>Most people like to be with others.</item>
+        <item>At school, you are with your teacher.</item>
+        <item>Your teacher does not stay too close to you.</item>
+        <item>You should stay at the length of a arm when you talk to her.</item>
+        <item>You should maintain a personal space with the teacher. She does not like if you stand too close.</item>
+        <item>When kids talk to you they stand at a arms length.</item>
+        <item>You should also stand at arms length.</item>
+        <item>You should not touch people repeatedly while talking.</item>
+        <item>Touching others means invading their personal space.</item>
+        <item>People like to keep their own personal space. Everyone would like it.</item>
+    </string-array>
+
+    <string-array name="playinggames">
+        <item>We might play different games.</item>
+        <item>Sometimes you see your friends playing it and you also want to play.</item>
+        <item>You can smile and ask them about it.</item>
+        <item>You can say Hello, What are you doing?</item>
+        <item>You can ask Hey, Can I have a turn?</item>
+        <item>You can ask, Can I play too?</item>
+        <item>My friends may take me to play.</item>
+        <item>Sometimes my friends might say no, which is okay.</item>
+        <item>If they say no, you can find other things to do.</item>
+        <item>You can play on my own, or ask someone else.</item>
+        <item>You should not scream, hit or push my friend to ask your friend to let you play.</item>
+        <item>You feel happy when you ask them, and your friends also does.</item>
+        <item>It is very good to play with friends at school.</item>
+    </string-array>
+
+    <string-array name="sharing">
+        <item>You can share items with your friends.</item>
+        <item>You love to play with toys and games. You can sometimes play alone too.</item>
+        <item>But playing with friends is even more fun together.</item>
+        <item>When playing with friends, you have to remember to share your toys with friends.</item>
+        <item>You can ride the scooter.</item>
+        <item>Then you can let your friend do it.</item>
+        <item>You can play with the green truck while your friend plays with the red truck.</item>
+        <item>Sharing and taking turns makes you and your friends feel happy.</item>
+    </string-array>
+
+    <string-array name="summervacation">
+        <item>It is time for summer vacation.</item>
+        <item>Summer vacation is time away from school.</item>
+        <item>Students are happy and excited about summer holidays.</item>
+        <item>For the weather, it is warm and nice. After summer vacation, You have to return to school.</item>
+        <item>During summer, you can read books, go swimming, go for movies or parks. You can play games as well.</item>
+    </string-array>
+
+    <string-array name="takingturns">
+        <item>You like to talk to people.</item>
+        <item>You can talk about lots of things.</item>
+        <item>When talking, You need to wait till it is your turn to talk.</item>
+        <item>You can listen when someone else is talking.</item>
+        <item>You can talk when someone else is done talking.</item>
+        <item>After you are done talking, You can listen to what people say.</item>
+        <item>Taking turns makes conversation fun for everyone.</item>
+    </string-array>
+
+    <string-array name="schoolwork">
+        <item>Sometimes, Doing school work feels frustrating.</item>
+        <item>You can put up a hand and tell the teacher that this is too hard.</item>
+        <item>You can ask for help.</item>
+        <item>You can look at your schedule, checking what to do next.</item>
+        <item>After doing work, you can do something fun!</item>
+    </string-array>
+    <string-array name="hygiene">
+        <item>I am a young</item>
+        <item>I am growing up</item>
+        <item>Sometimes my underarms will sweat and feel wet</item>
+        <item>Sometimes they will smell bad</item>
+        <item>Now i need to wash with soap and water everyday</item>
+        <item>I dry off</item>
+        <item>I put on deodorant</item>
+        <item>It keeps my under arms dry</item>
+        <item>Now i smell good</item>
+        <item>I will put on deodorant every day before i put on clothes</item>
+        <item>Deodorant helps</item>
+        <item>Now it is part of my daily routine</item>
+    </string-array>
+    <string-array name="covidstory">
+        <item>Sometimes people get sick.</item>
+        <item>When someone gets sick, it is because of germs. Germs are tiny things.</item>
+        <item>There is a new sickness called Corona virus.</item>
+        <item>These germs spread very easily.</item>
+        <item>If a bad germ sticks on me, I can get sick.</item>
+        <item>I need to wash my hands a lot so i can stay healthy.</item>
+        <item>When i wash my hands, i can count to 20.</item>
+        <item>This will make sure my hands are clean and i stay healthy.</item>
+        <item>Sometimes, so many people get sick that my school might to close!</item>
+        <item>If my school closes, they will clean it to get rid of all of the germs!</item>
+        <item>While they are cleaning my school, I will stay at home with my parents.</item>
+        <item>I will stay safe and healthy at home!</item>
+        <item>I will do fun things at my house</item>
+        <item>My teachers sent some things for me to work on while school is closed.</item>
+        <item>This will keep my brain working hard!</item>
+        <item>I will go back to school soon.</item>
+        <item>My parents and teachers want me to stay happy, health, and safe.</item>
+        <item>Wearing a mask keep me safe, when i outside of my home.</item>
+    </string-array>
+</resources>

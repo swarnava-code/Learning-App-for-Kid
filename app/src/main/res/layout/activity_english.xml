@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".English"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryVariantDayTitlebar"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="50dp"
+            android:paddingStart="50dp"
+            android:padding="10sp"
+            android:text="Learn &amp; Play"
+            android:textColor="#fff"
+            android:textSize="28sp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:targetApi="p" />
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:background="@color/colorPrimaryVariantDay"
+                    android:onClick="showAllBasic"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+                    <TextView
+                        android:layout_weight="5"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:text="Basic"
+                        android:layout_height="30dp"
+                        android:layout_width="wrap_content"></TextView>
+                    <TextView
+                        android:id="@+id/basic_arrow"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"></TextView>
+                </LinearLayout>
+
+                <TableRow
+                    android:id="@+id/eng1"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/bodypart"
+                        android:onClick="bodypart"
+                        android:text="BodyPart"></Button>
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/color"
+                        android:text="color"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/eng2"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                </TableRow>
+
+
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:background="@color/colorPrimaryVariantDay"
+                    android:onClick="shoAllGrammar"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+                    <TextView
+                        android:layout_weight="5"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:text="Grammar"
+                        android:layout_height="30dp"
+                        android:layout_width="wrap_content"></TextView>
+                    <TextView
+                        android:id="@+id/grammar_arrow"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"></TextView>
+                </LinearLayout>
+
+
+
+                <TableRow
+                    android:id="@+id/eng3"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/english"
+                        android:onClick="buttonClickRight"
+                        android:text="alphabet"></Button>
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/pronoun"
+                        android:text="pronoun"/>
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:id="@+id/eng4"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/verb"
+                        android:text="verb"
+                        ></Button>
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/preposition"
+                        android:text="preposition"/>
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/eng5"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:id="@+id/eng6"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/words"
+                        android:text="threeletterword"/>
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/words"
+                        android:text="fourletterword"
+                        ></Button>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/eng7"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/words"
+                        android:text="fiveletterword"/>
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/words"
+                        android:text="sixletterword"
+                        />
+                </TableRow>
+
+
+
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:background="@color/colorPrimaryVariantDay"
+                    android:onClick="showAllEncyclopedia"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+                    <TextView
+                        android:layout_weight="5"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:text="Encyclopedia"
+                        android:layout_height="30dp"
+                        android:layout_width="wrap_content"></TextView>
+                    <TextView
+                        android:id="@+id/encyclopedia_arrow"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"></TextView>
+                </LinearLayout>
+
+
+
+                <TableRow
+                    android:id="@+id/eng8"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/animal"
+                        android:onClick="buttonClickLeft"
+                        android:text="Animal"></Button>
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/bird"
+                        android:onClick="buttonClickRight"
+                        android:text="Bird"></Button>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/eng9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/flower"
+                        android:onClick="buttonClickLeft"
+                        android:text="flower" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/fruit"
+                        android:onClick="buttonClickRight"
+                        android:text="fruit" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/eng10"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/vegetable"
+                        android:onClick="buttonClickLeft"
+                        android:text="Vegetable" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/tree"
+                        android:onClick="buttonClickRight"
+                        android:text="Tree"></Button>
+                </TableRow>
+            <TableRow
+                android:id="@+id/eng11"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <Button
+                    android:onClick="buttonClickLeft"
+                    style="@style/button_style_1"
+                    android:drawableTop="@drawable/foodicon"
+                    android:text="Food"/>
+
+                <Button
+                    android:onClick="buttonClickRight"
+                    style="@style/button_style_1"
+                    android:drawableTop="@drawable/musicicon"
+                    android:text="Music"
+                    ></Button>
+            </TableRow>
+                <TableRow
+                    android:id="@+id/eng12"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/toys"
+                        android:text="Toys"/>
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/sports"
+                        android:text="Sports"
+                        ></Button>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/eng13"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/insects"
+                        android:text="Insects"/>
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/flags"
+                        android:text="Flags"
+                        ></Button>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/eng14"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/kitchens"
+                        android:text="Kitchen"/>
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/shapes"
+                        android:text="Shapes"
+                        ></Button>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/eng15"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/technology"
+                        android:text="Technology"/>
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/occupations"
+                        android:text="Occupations"
+                        ></Button>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/eng16"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <Button
+                        android:onClick="buttonClickLeft"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/reptiles"
+                        android:text="Reptiles"/>
+
+                    <Button
+                        android:onClick="buttonClickRight"
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/places"
+                        android:text="places"
+                        ></Button>
+                </TableRow>
+
+
+
+            </TableLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <ImageButton
+        android:onClick="back"
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

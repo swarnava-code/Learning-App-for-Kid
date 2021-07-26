@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SocialStoryMenuActivity"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGradientCenter"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="50dp"
+            android:paddingStart="50dp"
+            android:padding="10sp"
+            android:text="Social Story"
+            android:textColor="#fff"
+            android:textSize="28sp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:targetApi="p" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvstories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"/>
+
+<!--            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TableRow
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/play_math"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:checkable="true"
+                        android:clickable="true"
+                        android:elevation="30dp"
+                        android:focusable="true"
+                        app:cardCornerRadius="10dp"
+                        android:onClick="buttonClickLeft">
+
+                        <LinearLayout
+                            android:background="@color/colorGradientCenter"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_marginTop="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/hygiene" />
+
+                            <TextView
+                                android:padding="5dp"
+                                android:layout_marginTop="15dp"
+                                android:id="@+id/textname"
+                                android:textColor="@color/pressedStart"
+                                android:fontFamily="@font/passero"
+                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hygiene" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/covidstory"
+                        android:onClick="buttonClickRight"
+                        android:text="Covid Story" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/birthday"
+                        android:onClick="buttonClickLeft"
+                        android:text="Birthday" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/angry"
+                        android:onClick="buttonClickRight"
+                        android:text="Angry" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/askforhelp"
+                        android:onClick="buttonClickLeft"
+                        android:text="Ask for Help" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/brushing"
+                        android:onClick="buttonClickRight"
+                        android:text="Brushing" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/schooltime"
+                        android:onClick="buttonClickLeft"
+                        android:text="School Time" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/hideandseek"
+                        android:onClick="buttonClickRight"
+                        android:text="Hide and Seek"></Button>
+                </TableRow>
+
+                <TableRow
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/hittingothers"
+                        android:onClick="buttonClickLeft"
+                        android:text="Hitting Others" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/makingnoise"
+                        android:onClick="buttonClickRight"
+                        android:text="Making Noise"></Button>
+                </TableRow>
+
+                <TableRow
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/personalspace"
+                        android:onClick="buttonClickLeft"
+                        android:text="Personal Space" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/playinggames"
+                        android:onClick="buttonClickRight"
+                        android:text="Playing Games"></Button>
+                </TableRow>
+
+                <TableRow
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/sharing"
+                        android:onClick="buttonClickLeft"
+                        android:text="Sharing" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/summervacation"
+                        android:onClick="buttonClickRight"
+                        android:text="Summer Vacation"></Button>
+                </TableRow>
+
+                <TableRow
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/takingturns"
+                        android:onClick="buttonClickLeft"
+                        android:text="Taking Turns" />
+
+                    <Button
+                        style="@style/button_style_1"
+                        android:drawableTop="@drawable/schoolwork"
+                        android:onClick="buttonClickRight"
+                        android:text="School Work"></Button>
+                </TableRow>
+            </TableLayout>-->
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@null"
+            android:foregroundGravity="center_vertical|center_horizontal"
+            android:onClick="btn_back"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
