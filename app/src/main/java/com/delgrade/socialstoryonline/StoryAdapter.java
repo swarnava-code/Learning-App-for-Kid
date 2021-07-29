@@ -22,7 +22,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
     private ItemClickListener mClickListener;
     String title;
 
-    int[] img_bg = {R.drawable.hygiene, R.drawable.covidstory, R.drawable.c, R.drawable.e };
+//    int[] img_bg = {R.drawable.hygiene, R.drawable.covidstory, R.drawable.c, R.drawable.e };
 
     String url ="https://stcetcse2021.delgradecorporation.in/ss-v1/assets/images/";
 

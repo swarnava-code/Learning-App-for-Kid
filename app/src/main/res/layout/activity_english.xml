@@ -75,15 +75,15 @@
                     android:gravity="center">
 
                     <Button
+                        android:id="@+id/bodypart"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/bodypart"
                         android:onClick="bodypart"
                         android:text="BodyPart"></Button>
 
                     <Button
+                        android:id="@+id/color"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/color"
                         android:text="color"
                         />
                 </TableRow>
@@ -130,14 +130,14 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <Button
+                        android:id="@+id/alphabet"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/english"
                         android:onClick="buttonClickRight"
                         android:text="alphabet"></Button>
                     <Button
+                        android:id="@+id/pronoun"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/pronoun"
                         android:text="pronoun"/>
 
                 </TableRow>
@@ -150,15 +150,15 @@
                     android:gravity="center">
 
                     <Button
+                        android:id="@+id/verb"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/verb"
                         android:text="verb"
                         ></Button>
                     <Button
+                        android:id="@+id/preposition"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/preposition"
                         android:text="preposition"/>
 
                 </TableRow>
@@ -176,15 +176,15 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <Button
+                        android:id="@+id/threeletterword"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/words"
                         android:text="threeletterword"/>
 
                     <Button
+                        android:id="@+id/fourletterword"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/words"
                         android:text="fourletterword"
                         ></Button>
                 </TableRow>
@@ -193,15 +193,15 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <Button
+                        android:id="@+id/fiveletterword"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/words"
                         android:text="fiveletterword"/>
 
                     <Button
+                        android:id="@+id/sixletterword"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/words"
                         android:text="sixletterword"
                         />
                 </TableRow>
@@ -243,14 +243,14 @@
                     android:gravity="center">
 
                     <Button
+                        android:id="@+id/animal"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/animal"
                         android:onClick="buttonClickLeft"
                         android:text="Animal"></Button>
 
                     <Button
+                        android:id="@+id/bird"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/bird"
                         android:onClick="buttonClickRight"
                         android:text="Bird"></Button>
                 </TableRow>
@@ -263,14 +263,14 @@
                     android:gravity="center">
 
                     <Button
+                        android:id="@+id/flower"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/flower"
                         android:onClick="buttonClickLeft"
                         android:text="flower" />
 
                     <Button
+                        android:id="@+id/fruit"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/fruit"
                         android:onClick="buttonClickRight"
                         android:text="fruit" />
                 </TableRow>
@@ -281,14 +281,14 @@
                     android:gravity="center">
 
                     <Button
+                        android:id="@+id/vegetable"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/vegetable"
                         android:onClick="buttonClickLeft"
                         android:text="Vegetable" />
 
                     <Button
+                        android:id="@+id/tree"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/tree"
                         android:onClick="buttonClickRight"
                         android:text="Tree"></Button>
                 </TableRow>
@@ -297,15 +297,15 @@
                 android:layout_gravity="center"
                 android:gravity="center">
                 <Button
+                    android:id="@+id/food"
                     android:onClick="buttonClickLeft"
                     style="@style/button_style_1"
-                    android:drawableTop="@drawable/foodicon"
                     android:text="Food"/>
 
                 <Button
+                    android:id="@+id/music"
                     android:onClick="buttonClickRight"
                     style="@style/button_style_1"
-                    android:drawableTop="@drawable/musicicon"
                     android:text="Music"
                     ></Button>
             </TableRow>
@@ -314,15 +314,15 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <Button
+                        android:id="@+id/toys"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/toys"
                         android:text="Toys"/>
 
                     <Button
+                        android:id="@+id/sports"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/sports"
                         android:text="Sports"
                         ></Button>
                 </TableRow>
@@ -331,15 +331,15 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <Button
+                        android:id="@+id/insects"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/insects"
                         android:text="Insects"/>
 
                     <Button
+                        android:id="@+id/flags"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/flags"
                         android:text="Flags"
                         ></Button>
                 </TableRow>
@@ -348,15 +348,15 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <Button
+                        android:id="@+id/kitchen"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/kitchens"
                         android:text="Kitchen"/>
 
                     <Button
+                        android:id="@+id/shapes"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/shapes"
                         android:text="Shapes"
                         ></Button>
                 </TableRow>
@@ -365,15 +365,15 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <Button
+                        android:id="@+id/technology"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/technology"
                         android:text="Technology"/>
 
                     <Button
+                        android:id="@+id/occupations"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/occupations"
                         android:text="Occupations"
                         ></Button>
                 </TableRow>
@@ -382,15 +382,15 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <Button
+                        android:id="@+id/reptiles"
                         android:onClick="buttonClickLeft"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/reptiles"
                         android:text="Reptiles"/>
 
                     <Button
+                        android:id="@+id/places"
                         android:onClick="buttonClickRight"
                         style="@style/button_style_1"
-                        android:drawableTop="@drawable/places"
                         android:text="places"
                         ></Button>
                 </TableRow>

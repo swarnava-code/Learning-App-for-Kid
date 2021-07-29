@@ -52,6 +52,37 @@
         <item>Unsplash</item>
     </string-array>
 
+    <string-array name="english">
+        <item>bodypart</item>
+        <item>color</item>
+        <item>alphabet</item>
+        <item>pronoun</item>
+        <item>verb</item>
+        <item>preposition</item>
+        <item>threeletterword</item>
+        <item>fourletterword</item>
+        <item>fiveletterword</item>
+        <item>sixletterword</item>
+        <item>animal</item>
+        <item>bird</item>
+        <item>flower</item>
+        <item>fruit</item>
+        <item>vegetable</item>
+        <item>tree</item>
+        <item>food</item>
+        <item>music</item>
+        <item>toys</item>
+        <item>sports</item>
+        <item>insects</item>
+        <item>flags</item>
+        <item>kitchen</item>
+        <item>shapes</item>
+        <item>technology</item>
+        <item>occupations</item>
+        <item>reptiles</item>
+        <item>places</item>
+    </string-array>
+
     <string-array name="animal">
         <item>Dog</item>
         <item>Cat</item>

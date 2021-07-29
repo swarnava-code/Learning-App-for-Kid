@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.bumptech.glide.Glide;
 import com.delgrade.socialstoryonline.English;
 import com.delgrade.socialstoryonline.FunTimeMenu;
 import com.delgrade.socialstoryonline.Mathematics;
@@ -25,7 +24,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     CardView btn_math, btn_english,btn_social_story,btn_funtime;
     //final Animation translateScale = AnimationUtils.loadAnimation(HomeFragment.this, R.anim.translate_scale);
-    int[] img_bg = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.e };
+   // int[] img_bg = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.e };
     View root;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -61,9 +60,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     void loadImage() {
         ImageView img=(ImageView) root.findViewById(R.id.img);
         Random rand = new Random();
-        int max = img_bg.length;
-        int randomNum = rand.nextInt(max);
-        Glide.with(requireContext()).load(img_bg[randomNum]).into(img);
+        //int max = img_bg.length;
+        //int randomNum = rand.nextInt(max);
+        //Glide.with(requireContext()).load(img_bg[randomNum]).into(img);
     }
 
 

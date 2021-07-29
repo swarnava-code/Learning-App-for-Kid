@@ -29,7 +29,7 @@
             android:backgroundTint="#F8DFB5"
             android:padding="10sp"
             android:scaleType="fitXY"
-            android:src="@drawable/feedback" />
+            android:src="@drawable/logo" />
     </com.google.android.material.card.MaterialCardView>
 
 

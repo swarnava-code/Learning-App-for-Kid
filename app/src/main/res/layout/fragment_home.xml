@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
+                android:layout_gravity="center"
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -207,24 +208,6 @@
 
                 </TableLayout>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:checkable="true"
-                    android:clickable="true"
-                    android:elevation="30dp"
-                    android:focusable="true"
-                    app:cardCornerRadius="18dp"
-                    android:backgroundTint="@color/white">
-                    <ImageView
-                        android:id="@+id/img"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"
-                        android:padding="10sp"
-                        style="@style/image_style_1"
-                        android:scaleType="fitXY" />
-                </com.google.android.material.card.MaterialCardView>
 
 
             </LinearLayout>

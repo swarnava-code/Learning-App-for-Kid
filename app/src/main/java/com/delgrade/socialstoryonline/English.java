@@ -1,10 +1,14 @@
 package com.delgrade.socialstoryonline;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.StrictMode;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -13,7 +17,10 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.lang.reflect.Field;
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.IOException;
+import java.net.URL;
 
 public class English extends AppCompatActivity {
     Animation slide_left_out, slide_right_out, slide_right_in, slide_up, slide_down;
@@ -23,6 +30,10 @@ public class English extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_english);
+
+
+
+
 
         //anim conn
         slide_left_out = AnimationUtils.loadAnimation(English.this, R.anim.slide_left_out);
@@ -44,7 +55,111 @@ public class English extends AppCompatActivity {
 
 
 
+        //changeImage(NAME);
+
+        try {
+            new English.asyncTask().execute();
+            //setLogoByPicasso();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        //ImageView imageView = findViewById(this.getResources().getIdentifier(NAME, "id", this.getPackageName()));
     }
+
+
+    private class asyncTask extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+
+
+            String NAME = "";
+            int resId = getResources().getIdentifier("english", "array", getPackageName());
+            String imgTitle[] = getResources().getStringArray(resId);
+
+            for(int i=0; i<imgTitle.length; i++){
+                NAME = imgTitle[i];
+                String name = NAME.toLowerCase().replaceAll("\\s", "");
+                String id2 = "https://stcetcse2021.delgradecorporation.in/ss-v1/assets/images/english/"+name+"/"+name+".png";
+                Bitmap bitmapMain = null;
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                StrictMode.setThreadPolicy(policy);
+                try {
+                    URL url = new URL(id2);
+                    bitmapMain = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+                } catch(IOException e) {
+                    System.out.println(e);
+                }
+                int imageId = 0;
+                imageId = getResources().getIdentifier(NAME, "id", getPackageName());
+                Button button = findViewById(imageId);
+                Drawable top = new BitmapDrawable(getResources(), bitmapMain);;//getResources().getDrawable(R.drawable.angry);
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        button.setCompoundDrawablesWithIntrinsicBounds(null, top , null, null);
+                    }
+                });
+
+            }
+
+
+
+
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+            //for update
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            //execute this after backgroud task completed
+            // we can interact with frontend(GUI) here
+        }
+
+    }
+
+
+    void setLogoByPicasso() throws InterruptedException {
+        String NAME = "";
+        int resId = getResources().getIdentifier("english", "array", getPackageName());
+        String imgTitle[] = getResources().getStringArray(resId);
+
+        for(int i=0; i<imgTitle.length; i++){
+            NAME = imgTitle[i];
+            String name = NAME.toLowerCase().replaceAll("\\s", "");
+            String id2 = "https://stcetcse2021.delgradecorporation.in/ss-v1/assets/images/english/"+name+"/"+name+".png";
+            Bitmap bitmapMain = null;
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+            try {
+                URL url = new URL(id2);
+                bitmapMain = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+            } catch(IOException e) {
+                System.out.println(e);
+            }
+            int imageId = 0;
+            imageId = this.getResources().getIdentifier(NAME, "id", this.getPackageName());
+            Button button = findViewById(imageId);
+            Drawable top = new BitmapDrawable(getResources(), bitmapMain);;//getResources().getDrawable(R.drawable.angry);
+            button.setCompoundDrawablesWithIntrinsicBounds(null, top , null, null);
+        }
+    }
+
 
     public void buttonClickLeft(View view) {
         Button b = (Button)view;
