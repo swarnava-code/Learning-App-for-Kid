@@ -1,282 +1,143 @@
+
 package com.delgrade.socialstoryonline;
 
-import android.app.Activity;
-import android.content.pm.ActivityInfo;
-import android.content.res.AssetManager;
-import android.content.res.Resources;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.SeekBar;
-import android.widget.Toast;
-import com.chengtao.pianoview.entity.AutoPlayEntity;
-import com.chengtao.pianoview.entity.Piano;
-import com.chengtao.pianoview.listener.OnLoadAudioListener;
-import com.chengtao.pianoview.listener.OnPianoAutoPlayListener;
-import com.chengtao.pianoview.listener.OnPianoListener;
-import com.chengtao.pianoview.utils.AutoPlayUtils;
-import com.chengtao.pianoview.view.PianoView;
-import java.io.IOException;
-import java.util.ArrayList;
+import android.widget.TextView;
 
-@SuppressWarnings("FieldCanBeLocal") public class PianoActivity extends Activity
-        implements OnPianoListener, OnLoadAudioListener, SeekBar.OnSeekBarChangeListener,
-        View.OnClickListener, OnPianoAutoPlayListener {
-    //flight_of_the_bumble_bee,simple_little_star_config
-    private static final String CONFIG_FILE_NAME = "simple_little_star_config";
-    private static final boolean USE_CONFIG_FILE = true;
-    private PianoView pianoView;
-    private SeekBar seekBar;
-    private Button leftArrow;
-    private Button rightArrow;
-    private Button btnMusic;
-    private int scrollProgress = 0;
-    private final static float SEEKBAR_OFFSET_SIZE = -12;
+import androidx.appcompat.app.AppCompatActivity;
 
-    private boolean isPlay = false;
-    private ArrayList<AutoPlayEntity> litterStarList = null;
-    private static final long LITTER_STAR_BREAK_SHORT_TIME = 500;
-    private static final long LITTER_STAR_BREAK_LONG_TIME = 1000;
-    ProgressBar progress_circular;
+public class PianoActivity extends AppCompatActivity {
+    private SoundPool soundPool;
+    private int sound3StreamId, MAX_STREAM = 9; //6 piano button
+    int Stream[] = {R.raw.w36, R.raw.w40, R.raw.w41, R.raw.w42, R.raw.w43, R.raw.w44, R.raw.w45, R.raw.w46, R.raw.w50};
+    int sound[] = new int[Stream.length];
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+    TextView[] textViews = new TextView[Stream.length];
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_piano);
-        //view
-        pianoView = findViewById(R.id.pv);
-        pianoView.setSoundPollMaxStream(10);
-        seekBar = findViewById(R.id.sb);
-        seekBar.setThumbOffset((int) convertDpToPixel(SEEKBAR_OFFSET_SIZE));
-        leftArrow = findViewById(R.id.iv_left_arrow);
-        rightArrow = findViewById(R.id.iv_right_arrow);
-        btnMusic = findViewById(R.id.iv_music);
-        progress_circular = findViewById(R.id.progress_circular);
 
-        //listener
-        pianoView.setPianoListener(this);
-        pianoView.setAutoPlayListener(this);
-        pianoView.setLoadAudioListener(this);
-        seekBar.setOnSeekBarChangeListener(this);
-        rightArrow.setOnClickListener(this);
-        leftArrow.setOnClickListener(this);
-        btnMusic.setOnClickListener(this);
+        MAX_STREAM = Stream.length;
 
-        initLitterStarList();
-    }
-
-    /**
-     * init star
-     */
-    private void initLitterStarList() {
-        litterStarList = new ArrayList<>();
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 5, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 5, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_LONG_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, LITTER_STAR_BREAK_LONG_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, LITTER_STAR_BREAK_LONG_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, LITTER_STAR_BREAK_LONG_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 5, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 5, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 4, LITTER_STAR_BREAK_LONG_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 3, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 2, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 1, LITTER_STAR_BREAK_SHORT_TIME));
-        litterStarList.add(
-                new AutoPlayEntity(Piano.PianoKeyType.WHITE, 4, 0, LITTER_STAR_BREAK_LONG_TIME));
-    }
-
-
-    @Override public void onPianoInitFinish() {
-
-    }
-
-    @Override public void onPianoClick(Piano.PianoKeyType type, Piano.PianoVoice voice, int group,
-                                       int positionOfGroup) {
-    }
-
-    @Override public void loadPianoAudioStart() {
-        Toast.makeText(getApplicationContext(), "Please Wait...", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override public void loadPianoAudioFinish() {
-        progress_circular.setVisibility(View.GONE);
-        Toast.makeText(getApplicationContext(), "Ready to play", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override public void loadPianoAudioError(Exception e) {
-        progress_circular.setVisibility(View.GONE);
-        Toast.makeText(getApplicationContext(), "Fail to load Piano sound", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override public void loadPianoAudioProgress(int progress) {
-        Log.e("TAG", "progress:" + progress);
-    }
-
-    @Override public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-        pianoView.scroll(i);
-    }
-
-    @Override public void onStartTrackingTouch(SeekBar seekBar) {
-
-    }
-
-    @Override public void onStopTrackingTouch(SeekBar seekBar) {
-
-    }
-
-    @Override protected void onResume() {
-        /**
-         * 设置为横屏
-         */
-        if (getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        for(int i=0; i<MAX_STREAM; i++){
+            int j = i;
+            textViews[i] = findViewById(getResources().getIdentifier("tv"+i, "id", getPackageName()));
         }
-        super.onResume();
-    }
 
-    @Override public void onClick(View view) {
-        if (scrollProgress == 0) {
-            try {
-                scrollProgress = (pianoView.getLayoutWidth() * 100) / pianoView.getPianoWidth();
-            } catch (Exception e) {
 
+        textViews[0].setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                soundPool.play(sound[0], 1, 1, 0, 0, 1);
+
+                return false;
             }
+        });
+
+        textViews[1].setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                soundPool.play(sound[1], 1, 1, 0, 0, 1);
+                return false;
+            }
+        });
+
+        textViews[2].setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                soundPool.play(sound[2], 1, 1, 0, 0, 1);
+                return false;
+            }
+        });
+
+        textViews[3].setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                soundPool.play(sound[3], 1, 1, 0, 0, 1);
+                return false;
+            }
+        });
+
+        textViews[4].setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                soundPool.play(sound[4], 1, 1, 0, 0, 1);
+                return false;
+            }
+        });
+
+        textViews[5].setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                soundPool.play(sound[5], 1, 1, 0, 0, 1);
+                return false;
+            }
+        });
+
+        textViews[6].setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                soundPool.play(sound[6], 1, 1, 0, 0, 1);
+                return false;
+            }
+        });
+
+        textViews[7].setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                soundPool.play(sound[7], 1, 1, 0, 0, 1);
+                return false;
+            }
+        });
+
+
+
+
+
+
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .build();
+
+            soundPool = new SoundPool.Builder()
+                    .setMaxStreams(MAX_STREAM)
+                    .setAudioAttributes(audioAttributes)
+                    .build();
+        } else {
+            soundPool = new SoundPool(MAX_STREAM, AudioManager.STREAM_MUSIC, 0);
         }
-        int progress;
-        switch (view.getId()) {
-            case R.id.iv_left_arrow:
-                if (scrollProgress == 0) {
-                    progress = 0;
-                } else {
-                    progress = seekBar.getProgress() - scrollProgress;
-                    if (progress < 0) {
-                        progress = 0;
-                    }
-                }
-                seekBar.setProgress(progress);
-                break;
-            case R.id.iv_right_arrow:
-                if (scrollProgress == 0) {
-                    progress = 100;
-                } else {
-                    progress = seekBar.getProgress() + scrollProgress;
-                    if (progress > 100) {
-                        progress = 100;
-                    }
-                }
-                seekBar.setProgress(progress);
-                break;
-            case R.id.iv_music:
-                if (!isPlay) {
-                    pianoView.autoPlay(litterStarList);
-                }
-                break;
+
+        for(int i=0; i<MAX_STREAM; i++){
+            sound[i] = soundPool.load(this, Stream[i], 1);
         }
     }
 
-    /**
-     * Dp to px
-     *
-     * @param dp dp值
-     * @return px 值
-     */
-    private float convertDpToPixel(float dp) {
-        Resources resources = this.getResources();
-        DisplayMetrics metrics = resources.getDisplayMetrics();
-        return dp * ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
-    }
 
-    @Override public void onPianoAutoPlayStart() {
-        Toast.makeText(this, "onPianoAutoPlayStart", Toast.LENGTH_SHORT).show();
-    }
+/*
+To pause
+//soundPool.pause(sound3StreamId);
+//soundPool.autoPause();
+ */
 
-    @Override public void onPianoAutoPlayEnd() {
-        Toast.makeText(this, "onPianoAutoPlayEnd", Toast.LENGTH_SHORT).show();
-        isPlay = false;
-    }
 
-    @Override protected void onDestroy() {
+    @Override
+    protected void onDestroy() {
         super.onDestroy();
-        if (pianoView != null) {
-            pianoView.releaseAutoPlay();
-        }
+        soundPool.release();
+        soundPool = null;
     }
 }

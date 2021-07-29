@@ -58,4 +58,14 @@
 
     <color name="homeBtnTxtColor">#3F51B5</color>
 
+    <color name="piano0">#F44336</color>
+    <color name="piano1">#E91E63</color>
+    <color name="piano2">#673AB7</color>
+    <color name="piano3">#03A9F4</color>
+    <color name="piano4">#009688</color>
+    <color name="piano5">#8BC34A</color>
+    <color name="piano6">#FFC107</color>
+    <color name="piano7">#FF5722</color>
+
+
 </resources>

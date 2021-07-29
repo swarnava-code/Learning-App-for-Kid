@@ -1,74 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_main"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/bg2">
+    android:layout_margin="10dp"
+    android:background="@drawable/bg2"
+    tools:context=".PianoActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <TextView
+        android:id="@+id/tv0"
+        android:background="@color/piano0"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="50dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
+    <TextView
+        android:id="@+id/tv1"
+        android:background="@color/piano1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
 
-            <Button
-                android:id="@+id/iv_left_arrow"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/left_arrow" />
+    <TextView
+        android:id="@+id/tv2"
+        android:background="@color/piano2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
 
-            <Button
-                android:id="@+id/iv_right_arrow"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/right_arrow" />
+    <TextView
+        android:id="@+id/tv3"
+        android:background="@color/piano3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
 
-            <Button
-                android:id="@+id/iv_music"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/music" />
+    <TextView
+        android:id="@+id/tv4"
+        android:background="@color/piano4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
 
-            <SeekBar
-                android:id="@+id/sb"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/piano_bar"
-                android:padding="0dp"
-                android:progressDrawable="@null"
-                android:thumb="@drawable/seekbar_thumb" />
-        </LinearLayout>
+    <TextView
+        android:id="@+id/tv5"
+        android:background="@color/piano5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:background="@color/piano6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:background="@color/piano7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
 
 
-        <com.chengtao.pianoview.view.PianoView
-            android:id="@+id/pv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
-
-
-    <ProgressBar
-        android:id="@+id/progress_circular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
