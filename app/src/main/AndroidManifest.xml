@@ -13,12 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
         <activity android:name=".SocialStoryActivity" />
-        <activity android:name=".PlayMath" />
-        <activity android:name=".FunTimeMenu" />
+        <activity android:name=".PlayMath"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FunTimeMenu"
+            android:screenOrientation="portrait"/>
         <activity android:name=".PaintActivity" />
-        <activity android:name=".PianoActivity" />
-        <activity android:name=".PuzzleActivity" />
-        <activity android:name=".BodyPart" />
+        <activity android:name=".PianoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PuzzleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BodyPart"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".LearnMathActivity"
             android:screenOrientation="portrait" />
